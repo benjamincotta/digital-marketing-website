@@ -1,0 +1,745 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  /* outline: 1px red solid !important;
+  visibility: visible !important; */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* NAV -----------------------------------------*/
+nav {
+  background: #270722;
+  height: 80px;
+  width: 100%;
+}
+
+label.logo {
+  color: #ffff;
+  font-size: 2.5em;
+  font-family: 'Staatliches', cursive;
+  line-height: 80px;
+  padding: 0 100px;
+  cursor: pointer;
+}
+
+nav ul {
+  float: right;
+  margin-right: 20px;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color: #ffff;
+  font-size: 0.9em;
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+  padding: 6px 12px;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+  color: #35a7ff;
+  transition: 0.1s ease-in;
+  padding: 6px 12px;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 4, 3);
+}
+
+/* HAMBURGER -----------------------------------*/
+
+.checkbtn {
+  font-size: 1.6em;
+  color: #ffff;
+  float: right;
+  /* line-height: 80px; */
+  margin-right: 40px;
+  display: none;
+  cursor: pointer;
+}
+
+.checkbtn i {
+  line-height: 80px;
+}
+
+#check {
+  display: none;
+}
+
+/* MAIN --------------------------------*/
+
+.above-fold-image {
+  background-image: url(./images/skyscraper.jpg),
+    linear-gradient(360deg, #270722, #38618c);
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.above-fold-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.above-fold-hero h1 {
+  color: #ffff;
+  font-size: 4em;
+}
+
+.above-fold-hero h2 {
+  color: #ffff;
+  font-size: 1.3em;
+  padding-top: 36px;
+  font-weight: 300;
+}
+
+.main-buttons {
+  padding-top: 36px;
+  margin: 0 90px;
+  display: block;
+}
+
+.main-buttons button {
+  padding: 10px;
+  width: 180px;
+  margin: 12px;
+  font-size: 1em;
+  color: #ffff;
+  background-color: #35a7ff;
+  border-radius: 10px;
+  border: 2px solid #35a7ff;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.main-buttons .see-through-button {
+  background: none;
+  border: 2px solid #35a7ff;
+}
+
+.main-buttons button:hover {
+  background-color: #270722;
+  border: 2px solid #270722;
+  transition: 0.3s ease-in;
+  padding: 10px;
+  margin: 12px;
+}
+
+.chevron-down {
+  display: block;
+  position: relative;
+  top: 170px;
+}
+
+#chevron-down ~ i {
+  color: #ffff;
+  font-size: 1.4em;
+}
+
+/* ABOUT US --------------------------------*/
+
+.about-us {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-top: 120px;
+}
+
+h3 {
+  font-size: 2em;
+  color: #333333;
+}
+
+h4 {
+  color: #333333;
+  font-size: 1.2em;
+  margin-top: 26px;
+  padding: 0px 40px;
+  text-align: center;
+}
+
+hr {
+  width: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 2px;
+  margin-top: 26px;
+  background-color: #35a7ff;
+  border: 0 none;
+}
+
+.about-us-text-img {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-us-text-img {
+  padding: 0px 66px 0px 66px;
+  margin-top: 26px;
+}
+
+.about-us-text-img p {
+  font-size: 1.1rem;
+  text-align: left;
+  color: #333333;
+  font-weight: 300;
+  line-height: 26px;
+  padding-right: 70px;
+}
+
+.about-us img {
+  width: 40%;
+  margin-top: 26px;
+}
+
+/* PORTFOLIO --------------------------------*/
+
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 120px;
+}
+
+.portfolio-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 26px;
+  margin-bottom: 20px;
+}
+
+.container {
+  position: relative;
+  width: 50%;
+  max-width: 300px;
+  background: #270722;
+}
+
+.image {
+  display: block;
+  width: 100%;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 40%;
+  color: #f1f1f1;
+  width: 100%;
+  transition: 0.2s ease;
+  opacity: 0;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.image:hover {
+  opacity: 10%;
+  transition: 0.2s ease;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.portfolio-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.portfolio-cta p {
+  font-size: 1.6em;
+  color: #333333;
+  margin-top: 26px;
+}
+
+.portfolio-cta button {
+  padding: 12px;
+  width: 180px;
+  margin: 12px;
+  font-size: 1em;
+  color: #35a7ff;
+  border-radius: 10px;
+  border: 2px solid #35a7ff;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin-top: 26px;
+  background: none;
+  border: 2px solid #35a7ff;
+}
+
+.portfolio-cta button:hover {
+  background-color: #270722;
+  border: 2px solid #270722;
+  color: #ffff;
+  transition: 0.2s ease-in;
+}
+
+/* SERVICES --------------------------------*/
+
+.services {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 120px;
+}
+
+.service-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 36px;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-basis: 25em;
+  padding: 20px;
+}
+
+.cards i {
+  color: #35a7ff;
+  font-size: 2.5em;
+  padding: 12px 0px;
+}
+
+.cards h3 {
+  font-size: 1.4em;
+  color: #333333;
+  padding: 12px 0px;
+  text-transform: uppercase;
+}
+
+.cards p {
+  font-size: 1em;
+  color: #333333;
+  padding: 12px 0px;
+  line-height: 1.5em;
+}
+
+/* TEAM --------------------------------*/
+
+.team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 120px;
+}
+
+.employees {
+  margin-top: 26px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0px 20px;
+}
+
+.employee-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 14px;
+}
+
+.employee-cards img {
+  width: 280px;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.2);
+}
+
+.employee-cards img:hover {
+  transform: scale(1.1);
+}
+
+.employee-cards h4 {
+  font-size: 1.5em;
+  color: #333333;
+  margin-top: 20px;
+  font-weight: 400;
+}
+.employee-cards h5 {
+  font-size: 1em;
+  color: #333333;
+  margin-top: 10px;
+  font-weight: 300;
+}
+
+.seperator {
+  background-image: url(./images/jet.jpg);
+  background-color: #270722;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-blend-mode: overlay;
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.seperator p {
+  color: #ffff;
+  font-size: 1.4em;
+  text-align: center;
+  padding: 0px 80px;
+}
+
+/* BLOG POSTS --------------------------------*/
+
+.blog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 120px;
+}
+
+.blog-cards {
+  margin-top: 26px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.blog-posts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px 40px;
+}
+
+.blog-posts img {
+  width: 300px;
+  height: 300px;
+  margin-top: 20px;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.2);
+}
+
+.blog-posts h6 {
+  font-size: 1.2em;
+  margin-top: 20px;
+  color: #333333;
+  font-weight: 500;
+}
+
+.blog-posts p {
+  font-size: 1.1em;
+  margin-top: 20px;
+  color: #333333;
+}
+
+.blog-posts p.date {
+  font-style: italic;
+}
+
+.blog-posts a {
+  font-size: 1em;
+  margin-top: 20px;
+  color: #35a7ff;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.blog-posts i {
+  margin-left: 4px;
+}
+
+.blog-cta button {
+  padding: 12px;
+  width: 180px;
+  margin: 12px;
+  font-size: 1em;
+  color: #270722;
+  border-radius: 10px;
+  border: 2px solid #270722;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin-top: 36px;
+  background: none;
+  border: 2px solid #270722;
+}
+
+.blog-cta button:hover {
+  background-color: #270722;
+  border: 2px solid #270722;
+  color: #ffff;
+  transition: 0.2s ease-in;
+}
+
+/* CONTACT --------------------------------*/
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 120px;
+  text-align: center;
+}
+
+.contact-form {
+  margin-top: 40px;
+  padding: 0px 40px;
+}
+
+.form1 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form1 input[type='text'],
+textarea,
+select {
+  width: 49%;
+}
+
+input[type='text'],
+textarea,
+select {
+  width: 100%;
+  padding: 18px 20px;
+  margin: 24px 0;
+  border: 1px solid #ccc;
+}
+
+input[type='submit'] {
+  padding: 12px;
+  width: 180px;
+  margin: 12px;
+  font-size: 1em;
+  color: #38618c;
+  border-radius: 10px;
+  border: 2px solid #38618c;
+  cursor: pointer;
+  text-transform: uppercase;
+  background: none;
+}
+
+input[type='submit']:hover {
+  background-color: #38618c;
+  border: 2px solid #38618c;
+  color: #ffff;
+  transition: 0.2s ease-in;
+}
+
+footer {
+  margin-top: 120px;
+  background: #222323;
+  color: #ffff;
+  height: 25vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+}
+
+.social-links a {
+  padding: 20px;
+  text-transform: uppercase;
+  color: #ffff;
+  font-size: 0.8em;
+}
+
+.footer-info {
+  text-transform: uppercase;
+  font-size: 0.9em;
+}
+
+.footer-info span {
+  color: #35a7ff;
+}
+
+/* MEDIA QUERIES --------------------------------*/
+
+@media (max-width: 1024px) {
+  footer {
+    height: 35vh;
+  }
+}
+
+@media (max-width: 952px) {
+  label.logo {
+    font-size: 2em;
+  }
+  nav ul li a {
+    font-size: 0.8em;
+  }
+  .about-us-text-img {
+    flex-direction: column-reverse;
+  }
+  .about-us img {
+    width: 100%;
+  }
+  .about-us-text-img p {
+    text-align: center;
+    padding: 50px;
+  }
+}
+@media (max-width: 858px) {
+  .checkbtn {
+    display: block;
+  }
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #270722;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a {
+    font-size: 1em;
+    display: block;
+  }
+  nav ul li a:hover,
+  nav ul li a.active {
+    color: #35a7ff;
+  }
+
+  #check:checked ~ ul {
+    left: 0;
+  }
+  .above-fold-hero h1 {
+    font-size: 3em;
+  }
+  .above-fold-hero h2 {
+    padding-top: 14px;
+  }
+  .main-buttons button {
+    padding: 10px;
+    min-width: 85px;
+    margin: 12px;
+    font-size: 0.8em;
+  }
+  .chevron-down {
+    top: 80px;
+  }
+  .about-us img {
+    width: 100%;
+  }
+  .about-us-text-img p {
+    padding: 10px;
+    margin-top: 26px;
+  }
+  .seperator {
+    height: 40vh;
+  }
+  .social-links a {
+    font-size: 0.8em;
+  }
+  .footer-info {
+    font-size: 0.7em;
+  }
+}
+@media (max-width: 770px) {
+  .chevron-down {
+    top: 70px;
+  }
+  .about-us-text-img img {
+    width: 60%;
+  }
+  .above-fold-hero {
+    width: 90%;
+  }
+  .cards {
+    width: 50%;
+  }
+  .blog-posts {
+    max-width: 50%;
+  }
+  .blog-cards {
+    justify-content: flex-start;
+  }
+  .footer-info {
+    margin-bottom: 12px;
+  }
+}
+@media (max-width: 425px) {
+  label.logo {
+    padding: 0px 60px;
+  }
+  .above-fold-hero h1 {
+    font-size: 2.5em;
+  }
+  .above-fold-hero h2 {
+    font-size: 1em;
+  }
+  .employee-cards img {
+    width: 200px;
+  }
+  .seperator p {
+    font-size: 1em;
+    padding: 0px 40px;
+  }
+  .cards {
+    width: 100%;
+  }
+  .blog-posts img {
+    width: 135px;
+    height: 135px;
+  }
+  .social-links a {
+    font-size: 0.7em;
+  }
+}
+@media (max-width: 375px) {
+  label.logo {
+    padding: 0px 30px;
+  }
+  .blog-posts {
+    padding: 20px;
+  }
+  .social-links a {
+    padding: 10px;
+  }
+}
+@media (max-width: 320px) {
+  .employees {
+    padding: 0px;
+  }
+  .seperator p {
+    font-size: 1em;
+    padding: 0px 20px;
+  }
+}
