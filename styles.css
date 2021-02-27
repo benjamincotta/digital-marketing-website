@@ -165,13 +165,15 @@ nav ul li a:hover {
 }
 
 h3 {
+  font-family: 'Staatliches', cursive;
   font-size: 2em;
   color: #333333;
 }
 
 h4 {
+  font-family: 'Staatliches', cursive;
   color: #333333;
-  font-size: 1.2em;
+  font-size: 1.3em;
   margin-top: 26px;
   padding: 0px 40px;
   text-align: center;
@@ -250,7 +252,8 @@ hr {
   width: 100%;
   transition: 0.2s ease;
   opacity: 0;
-  font-size: 20px;
+  font-family: 'Staatliches', cursive;
+  font-size: 2em;
   padding: 20px;
   text-align: center;
 }
@@ -271,6 +274,7 @@ hr {
 }
 
 .portfolio-cta p {
+  font-family: 'Staatliches', cursive;
   font-size: 1.6em;
   color: #333333;
   margin-top: 26px;
@@ -391,6 +395,8 @@ hr {
   font-weight: 300;
 }
 
+/* SEPERATOR ------------------------------------*/
+
 .seperator {
   background-image: url(./images/jet.jpg);
   background-color: #270722;
@@ -407,8 +413,10 @@ hr {
 }
 
 .seperator p {
+  font-family: 'Staatliches', cursive;
+  font-weight: 200;
   color: #ffff;
-  font-size: 1.4em;
+  font-size: 1.6em;
   text-align: center;
   padding: 0px 80px;
 }
@@ -444,6 +452,7 @@ hr {
 }
 
 .blog-posts h6 {
+  font-family: 'Staatliches', cursive;
   font-size: 1.2em;
   margin-top: 20px;
   color: #333333;
@@ -461,6 +470,7 @@ hr {
 }
 
 .blog-posts a {
+  font-family: 'Staatliches', cursive;
   font-size: 1em;
   margin-top: 20px;
   color: #35a7ff;
@@ -568,15 +578,17 @@ footer {
 }
 
 .social-links a {
+  font-family: 'Staatliches', cursive;
   padding: 20px;
   text-transform: uppercase;
   color: #ffff;
-  font-size: 0.8em;
+  font-size: 2em;
 }
 
 .footer-info {
+  font-family: 'Staatliches', cursive;
   text-transform: uppercase;
-  font-size: 0.9em;
+  font-size: 1em;
 }
 
 .footer-info span {
@@ -672,7 +684,7 @@ footer {
     font-size: 0.7em;
   }
 }
-@media (max-width: 770px) {
+@media (max-width: 768px) {
   .chevron-down {
     top: 70px;
   }
@@ -682,8 +694,8 @@ footer {
   .above-fold-hero {
     width: 90%;
   }
-  .cards {
-    width: 50%;
+  .service-cards .cards {
+    max-width: 50%;
   }
   .blog-posts {
     max-width: 50%;
@@ -693,6 +705,12 @@ footer {
   }
   .footer-info {
     margin-bottom: 12px;
+  }
+  .social-links a {
+    font-size: 1.8em;
+  }
+  .footer-info p {
+    font-size: 1.5em;
   }
 }
 @media (max-width: 425px) {
@@ -712,15 +730,18 @@ footer {
     font-size: 1em;
     padding: 0px 40px;
   }
-  .cards {
-    width: 100%;
+  .service-cards .cards {
+    max-width: 100%;
   }
   .blog-posts img {
     width: 135px;
     height: 135px;
   }
   .social-links a {
-    font-size: 0.7em;
+    font-size: 1em;
+  }
+  .footer-info p {
+    font-size: 1.1em;
   }
 }
 @media (max-width: 375px) {
